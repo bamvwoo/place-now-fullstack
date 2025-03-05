@@ -14,8 +14,13 @@ const uri = process.env.DATABASE_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 */
 
+const authMiddleware = require('./middlewares/auth');
+const apiRoutes = require('./routes/api');
+
+app.use('/api', authMiddleware, apiRoutes);
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  // res.send('Hello, Express!');
 });
 
 app.listen(port, () => {

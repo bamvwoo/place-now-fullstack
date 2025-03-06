@@ -12,11 +12,13 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0",
     "socket.io-client": "^4.8.1",
     "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/navermaps": "^3.7.9",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@types/styled-components": "^5.1.34",

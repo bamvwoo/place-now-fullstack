@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import markerImage from "../assets/images/marker.gif";
 
 const Main = () => {
 
@@ -25,15 +24,17 @@ const Main = () => {
                     mapRef.current = new naver.maps.Map("mainMap", mapOptions);
                 }
 
-                if (mapRef.current) {
+                if (mapRef.current && !markerRef.current) {
                     markerRef.current = new naver.maps.Marker({
                         position: new naver.maps.LatLng(position.coords.latitude, position.coords.longitude),
-                        map: mapRef.current,
+                        map: mapRef.current
+                        /*
                         icon: {
                             content: `<img src="${markerImage}" width="300" height="300" />`,
                             size: new naver.maps.Size(300, 300),
                             anchor: new naver.maps.Point(150, 150)
                         }
+                        */
                     });
                 }
             });

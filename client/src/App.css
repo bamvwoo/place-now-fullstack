@@ -1,0 +1,27 @@
+:root {
+    --global-header-width: 70px;
+
+    --main-std-dark-bg-color: #333;
+	--main-std-light-bg-color: #fff;
+
+    --main-std-dark-font-color: #333;
+    --main-std-light-font-color: #fff;
+}
+
+#root:has(#wrapper.dark-mode) {
+    background-color: var(--main-std-dark-bg-color);
+}
+
+#root:has(#wrapper.light-mode) {
+    background-color: var(--main-std-light-bg-color);
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+}
